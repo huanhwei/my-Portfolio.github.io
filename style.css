@@ -1,0 +1,244 @@
+:root {
+  --pr-blue: rgb(69, 90, 116);
+  --pr-oblue: rgba(69, 90, 116, 0.3);
+  --pr-gray: rgb(240, 240, 241);
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+nav {
+  background-color: var(--pr-gray);
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+nav img {
+  height: 80%;
+}
+
+.icon {
+  width: 30px;
+  margin: 0 5px 0 0;
+}
+.left {
+  position: fixed;
+  width: 100px;
+  top: 50%;
+  left: 40px;
+  transform: translate(0, -50%);
+}
+
+.left a {
+  color: #455a74;
+  font-size: 0.7rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.line {
+  z-index: -1;
+  width: 1px;
+  height: 20px;
+  background-color: #455a74;
+  position: relative;
+  left: 15px;
+}
+.left div {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+.text {
+  font-size: 13px;
+  padding: 5px;
+  transform: translateX(-20px);
+  transition: 0.5s;
+  opacity: 0;
+}
+.left div:hover a .text {
+  transform: translateX(0);
+  opacity: 1;
+}
+.iconback {
+  background-color: var(--pr-gray);
+  width: 40px;
+  height: 255px;
+  border-radius: 20px;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  z-index: -2;
+}
+
+#home {
+  padding-top: 60px;
+  /* height: 100vh;  */
+  display: flex;
+  justify-content: center;
+}
+
+#graphic {
+  /* height: 100vh;  */
+  padding: 60px 100px;
+  background-color: var(--pr-oblue);
+  /* opacity: 0.2; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+#home .main {
+  width: 780;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.section {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 50px;
+}
+.card {
+  /* Add shadows to create the "card" effect */
+  background-color: var(--pr-gray);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 250px;
+  border-radius: 10px;
+}
+.card > img {
+  object-fit: cover;
+  width: 100%;
+}
+.card > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+.show {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+}
+.cardtext {
+  display: flex;
+}
+dialog {
+  width: 50%;
+  border: none;
+  box-shadow: 0 2px 6px #ccc;
+  border-radius: 10px;
+}
+dialog > button {
+  border: none;
+  border-radius: 50%;
+  background-color: var(--pr-gray);
+  color: var(--pr-blue);
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 6px;
+  top: 6px;
+}
+dialog > img {
+  width: 100%;
+}
+
+#video {
+  /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+  padding: 60px 100px;
+  display: flex;
+  justify-content: center;
+}
+.video1 {
+  width: 700px;
+  background-color: var(--pr-gray);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);;
+}
+.video1 img {
+  width: 95%;
+  margin-top: 10px;
+}
+.videotext {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+.videotext p {
+  padding: 0;
+  margin: 0;
+}
+.vline {
+    background-color: var(--pr-blue);
+    height: 1px;
+    /* width: 100%; */
+    margin: 0 28px;
+}
+
+#uiux {
+  padding: 60px 100px;
+  background-color: var(--pr-oblue);
+}
+.uiuxwork {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* gap: 20px; */
+}
+.uiuxwork img {
+    width: 100%;
+}
+.uwork {
+    border: 1px solid var(--pr-blue);
+    border-radius: 10px;
+    margin: 15px;
+    padding: 10px;
+}
+footer {
+    background-color: var(--pr-gray);
+    padding: 0 100px;
+}
+
+@media screen and (max-width: 780px) {
+  .left {
+    left: 0;
+  }
+  #home .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 0 0 30px;
+  }
+  #graphic {
+    padding: 60px 0;
+  }
+  dialog {
+    width: 100%;
+  }
+  #video {
+    padding: 60px 0;
+  }
+  .video1 {
+    width: 100%;
+  }
+  #uiux {
+    padding: 60px 0;
+  }
+  .uiuxwork {
+    grid-template-columns: 1fr;
+  }
+}
