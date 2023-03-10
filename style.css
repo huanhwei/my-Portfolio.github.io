@@ -78,10 +78,70 @@ nav img {
 }
 
 #home {
-  padding-top: 60px;
-  /* height: 100vh;  */
+  padding: 80px 100px 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.hdiv1 {
+  padding: 0 0 0 50px;
   display: flex;
+  flex: content;
   justify-content: center;
+}
+/* .hdiv1 div {
+
+} */
+.hdiv2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#home h1 {
+  color: var(--pr-blue);
+  /* padding: 0 10px; */
+}
+/* .title::before {
+  content: "";
+  position: absolute;
+  border-radius: 0 0 100% 0;
+  top: 25px;
+  left: 2px;
+  height: 20px;
+  width: 5px;
+  background-color: var(--pr-blue);
+} */
+#home img {
+  width: 250px;
+  text-align: center;
+}
+.course {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+}
+.course .homeline {
+  position: relative;
+  top: 30px;
+  height: 160px;
+  width: 2px;
+  background-color: #455a74;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+}
+.course .homeline .homec {
+  position: relative;
+  left: -1.5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #455a74;
+}
+.course .homeline .homec h4 {
+  margin: 0;
+  padding: 0;
+  color: #455a74;
 }
 
 #graphic {
@@ -168,7 +228,7 @@ dialog > img {
   background-color: var(--pr-gray);
   text-align: center;
   border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .video1 img {
   width: 95%;
@@ -185,10 +245,10 @@ dialog > img {
   margin: 0;
 }
 .vline {
-    background-color: var(--pr-blue);
-    height: 1px;
-    /* width: 100%; */
-    margin: 0 28px;
+  background-color: var(--pr-blue);
+  height: 1px;
+  /* width: 100%; */
+  margin: 0 28px;
 }
 
 #uiux {
@@ -201,27 +261,28 @@ dialog > img {
   /* gap: 20px; */
 }
 .uiuxwork img {
-    width: 100%;
+  width: 100%;
 }
 .uwork {
-    border: 1px solid var(--pr-blue);
-    border-radius: 10px;
-    margin: 15px;
-    padding: 10px;
+  /* border: 1px solid var(--pr-blue); */
+  border-radius: 10px;
+  margin: 15px;
+  padding: 10px;
+  background-color: var(--pr-gray);
 }
 footer {
-    background-color: var(--pr-gray);
-    padding: 0 100px;
+  background-color: var(--pr-gray);
+  padding: 0 100px;
 }
 
 @media screen and (max-width: 780px) {
   .left {
     left: 0;
   }
-  #home .main {
+  #home {
     display: grid;
     grid-template-columns: 1fr;
-    margin: 0 0 0 30px;
+    padding: 60px 0;
   }
   #graphic {
     padding: 60px 0;
